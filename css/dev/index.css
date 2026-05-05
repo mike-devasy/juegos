@@ -386,7 +386,7 @@ body {
     flex-wrap: wrap;
   }
   .button {
-    padding-inline: 5rem;
+    padding-inline: 4.375rem;
   }
   .home {
     background-image: url("../assets/img/hero/hero-image-mobile.webp");
