@@ -362,6 +362,12 @@ body {
   }
 }
 @media (max-width: 50.625em) and (width <= 23.4375em){
+  .button {
+    padding-block: 0.9375rem;
+  }
+  .button {
+    font-size: 1.5rem;
+  }
   .advantages-hero {
     font-size: 1.125rem;
   }
@@ -414,12 +420,6 @@ body {
   .footer {
     padding-top: 1.25rem;
   }
-  .button {
-    padding-block: 0.9375rem;
-  }
-  .button {
-    font-size: 1.5rem;
-  }
 }
 @media (max-width: 47.99875em){
   .footer__brands {
@@ -461,6 +461,9 @@ body {
   }
   .bottom-line {
     font-size: 0.625rem;
+  }
+  .button {
+    padding-inline: 2.5rem;
   }
   .popup-hero {
     padding-block: 0.3125rem;
@@ -522,21 +525,21 @@ body {
   .footer {
     padding-top: 2.5rem;
   }
+}
+@media (max-width: 50.625em) and (width > 108.125em){
   .button {
     padding-block: 1.25rem;
   }
   .button {
     font-size: 2.5rem;
   }
+  .advantages-hero {
+    font-size: 1.5rem;
+  }
 }
 @media (max-width: 50.625em) and (width > 47.9375em){
   .hero__content {
     padding-top: 29.6875rem;
-  }
-}
-@media (max-width: 50.625em) and (width > 108.125em){
-  .advantages-hero {
-    font-size: 1.5rem;
   }
 }
 @media (width > 23.4375em) and (width <= 108.125em){
@@ -578,14 +581,14 @@ body {
   .footer {
     padding-top: clamp( 1.25rem , 0.9040590405875rem  +  1.4760147601vw , 2.5rem );
   }
+}
+@media (max-width: 50.625em) and (width > 23.4375em) and (width <= 108.125em){
   .button {
     padding-block: clamp( 0.9375rem , 0.85101476015rem  +  0.36900369vw , 1.25rem );
   }
   .button {
     font-size: clamp( 1.5rem , 1.223247232475rem  +  1.1808118081vw , 2.5rem );
   }
-}
-@media (max-width: 50.625em) and (width > 23.4375em) and (width <= 108.125em){
   .advantages-hero {
     font-size: clamp( 1.125rem , 1.021217712175rem  +  0.442804428vw , 1.5rem );
   }
