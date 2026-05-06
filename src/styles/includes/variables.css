@@ -1,0 +1,16 @@
+/** @format */
+
+:root {
+	--fontFamily:"Manrope", sans-serif;
+	--secondaryFont:"Zalando Sans Expanded", serif;
+  --primary: #ffff;
+  --lightGreyColor: #ffffff80;
+  /* --bgColor: #1e1e1e; */
+  --blueColor: #0076ec;
+  --bgColor: #0c0c18;
+  --orangeColor: #fc6200;
+	--lightOrangeColor:#ff7117;
+  --greyColor: #27273f;
+  --violetColor: #1f1f33;
+  --darkVioletColor: #151526;
+}

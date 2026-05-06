@@ -1,0 +1,33 @@
+.header {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+// width: 100%;
+	@include adaptiveValue("padding-inline", 120, 0, 0, 1880, 1000);
+@include adaptiveValue("padding-top", 40, 15);
+@include adaptiveValue("min-height", 160, 80);
+// 	 min-height: 160px;
+// @media (max-width:toEm(810)){
+// 	 min-height: 110px; 
+// }
+    &__container {
+			@media (max-width:toEm(1000)){
+display: flex;
+justify-content: center;
+}
+    }
+
+    &__logo {
+@include adaptiveValue("width", 376, 180, 0, $maxWidthContainer, 1000);
+@media (max-width: toEm(810)){
+// @include adaptiveValue("width", 376, 280, 0, 810, 375);
+	  
+}
+
+    }
+
+    &__image {
+    }
+}
+
