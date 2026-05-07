@@ -1,74 +1,72 @@
- .wrapper{
+.wrapper {
 	position: relative;
-	 @media (max-width: toEm(1400)){
-		  min-height: 100svh;
-			height:100%;
-	 }
-	 @media (max-width: toEm(1000)){
-		  height:auto;
-	 }
- }
+	@media (max-width: toEm(1400)) {
+		min-height: 100svh;
+		height: 100%;
+	}
+	@media (max-width: toEm(1000)) {
+		height: auto;
+	}
+}
 .home {
 	background: url("@img/hero/hero-image.jpg") top right no-repeat;
-	 background-size: cover;
-	 width: 100%;
-	 overflow: hidden;
- 
- 
-	@media (max-width:toEm(1000)){
-  background-image: url("@img/hero/hero-image-mobile.jpg");
-  background-repeat: no-repeat;
-  background-position: center -30px;
-  background-size: 100% auto;
-  padding-inline: 0;
+	background-size: cover;
+	width: 100%;
+	overflow: hidden;
+
+	@media (max-width: toEm(1000)) {
+		background-image: url("@img/hero/hero-image-mobile.jpg");
+		background-repeat: no-repeat;
+		background-position: center -30px;
+		background-size: 100% auto;
+		padding-inline: 0;
 	}
- 
 }
 .page {
 	&__hero {
 	}
 }
 .hero {
-		@include adaptiveValue("padding-inline", 120, 0, 0, $maxWidthContainer, 1000);
-// display: flex;
+	@include adaptiveValue("padding-inline", 120, 0, 0, $maxWidthContainer, 1000);
+	// display: flex;
 	@include adaptiveValue("padding-top", 325, 200, 0, $maxWidthContainer, 1000);
 	@include adaptiveValue("padding-bottom", 90, 20, 0, $maxWidthContainer, 1000);
- 
- @media (max-width:toEm(1200)){
- }
+
+	@media (max-width: toEm(1200)) {
+	}
 
 	&__container {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-@media (max-width:toEm(1000)){
-	 align-items: center; 
-}
+		@media (max-width: toEm(1000)) {
+			align-items: center;
+		}
 	}
 
 	&__content {
 		display: flex;
-		flex-direction:column;
+		flex-direction: column;
 		align-items: center;
-				@include adaptiveValue("margin-bottom", 150, 50, 0, $maxWidthContainer, 1000);
-				// padding-top: 100px;
-		@media (max-width:toEm(1000)){
-	@include adaptiveValue("padding-top", 475, 100, 0, 767, 350);
+		@include adaptiveValue("margin-bottom", 150, 50, 0, $maxWidthContainer, 1000);
+		// padding-top: 100px;
+		@media (max-width: toEm(1000)) {
+			@include adaptiveValue("padding-top", 475, 100, 0, 767, 350);
 		}
 	}
 
 	&__title-block {
 		display: flex;
-		flex-direction:column;
-		row-gap:15px;
+		flex-direction: column;
+		row-gap: 15px;
 
-@include adaptiveValue("margin-bottom", 45, 25, 0, $maxWidthContainer, 1000);
+		@include adaptiveValue("margin-bottom", 45, 25, 0, $maxWidthContainer, 1000);
 	}
 
 	&__advantages {
 	}
 }
- 
+
 // .popup-hero {
 // 	 border: 2px solid #3f3f7e;
 // border-radius: 12px;
@@ -92,11 +90,11 @@
 //     &__image {
 // 			@media (max-width:toEm($mobile)){
 // 				 width: 90px;
-// 				 height: 90px; 
+// 				 height: 90px;
 // 			}
 // 			@media (max-width:toEm($mobileSmall)){
 // 				  		 width: 70px;
-// 				 height: 70px; 
+// 				 height: 70px;
 // 			}
 //     }
 
@@ -114,126 +112,112 @@
 // 	 font-size: 18px;
 // }
 // @media (max-width:toEm($mobileSmall)){
-// 	  	 line-height: 1; 
+// 	  	 line-height: 1;
 // }
 //     }
 // }
-.popup-hero{
-	 position: fixed;
-  z-index: 1000;
-  top: 12px;
-  left: 50%;
+.popup-hero {
+	position: fixed;
+	z-index: 1000;
+	top: 12px;
+	left: 50%;
 
-  transform: translate(-50%, -140%);
-  opacity: 0;
+	transform: translate(-50%, -140%);
+	opacity: 0;
 
-  border: 2px solid #3f3f7e;
-  border-radius: 12px;
-  padding-block: 15px;
+	border: 2px solid #3f3f7e;
+	border-radius: 12px;
+	padding-block: 15px;
 	@include adaptiveValue("padding-inline", 48, 8);
 	@include adaptiveValue("max-width", 807, 415, 0, 1900, 1110);
-  width: calc(100% - 30px);
+	width: calc(100% - 30px);
 	@include adaptiveValue("max-height", 147, 100);
 
-  box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25);
-  background: rgba(12, 12, 24, 0.8);
-  backdrop-filter: blur(6px);
+	box-shadow: 0 14px 14px 0 rgba(0, 0, 0, 0.25);
+	background: rgba(12, 12, 24, 0.8);
+	backdrop-filter: blur(6px);
 
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 	@include adaptiveValue("gap", 30, 10);
-  gap: 30px;
+	gap: 30px;
 
-  animation: popupDrop 8s ease-in-out infinite;
-  will-change: transform, opacity;
+	animation: popupDrop 8s ease-in-out infinite;
+	will-change: transform, opacity;
 
-  @media (max-width: toEm(1000)) {
-    top: 10px;
-    height: 120px;
-    gap: 10px;
-  }
+	@media (max-width: toEm(1000)) {
+		top: 10px;
+		height: 120px;
+		gap: 10px;
+	}
 
-  @media (max-width: toEm($mobileSmall)) {
-    padding-block: 5px;
+	@media (max-width: toEm($mobileSmall)) {
+		padding-block: 5px;
 		padding: 8px;
-		gap:5px;
-  }
-@media (max-width: toEm(400)){
-    height: 100px;
-	  
-}
-  &__image {
-    flex: 0 0 auto;
-@include adaptiveValue("width", 90, 70);
-@include adaptiveValue("height", 90, 70);
-    // @media (max-width: toEm(810)) {
-    //   width: 90px;
-    //   height: 90px;
-    // }
-
-    // @media (max-width: toEm(500)) {
-    //   width: 80px;
-    //   height: 80px;
-    // }
-    // @media (max-width: toEm(420)) {
-    //   width: 70px;
-    //   height: 70px;
-    // }
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    row-gap: 8px;
-    line-height: 1.3;
-    font-size: 20px;
-    text-transform: capitalize;
-p{
-	&:first-child{
-		font-weight: 600;
+		gap: 5px;
 	}
-	@media (max-width: toEm(1400)){
-		line-height: 1.1;  
+	@media (max-width: toEm(400)) {
+		height: 100px;
 	}
-}
-    @media (max-width: toEm(1170)) {
-      row-gap: 4px;
-      font-size: 18px;
-    }
+	&__image {
+		flex: 0 0 auto;
+		@include adaptiveValue("width", 90, 70);
+		@include adaptiveValue("height", 90, 70);
+	}
 
-    @media (max-width: toEm(480)) {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		row-gap: 8px;
+		line-height: 1.3;
+		font-size: 20px;
+		text-transform: capitalize;
+		p {
+			&:first-child {
+				font-weight: 600;
+			}
+			@media (max-width: toEm(1400)) {
+				line-height: 1.1;
+			}
+		}
+		@media (max-width: toEm(1170)) {
+			row-gap: 4px;
+			font-size: 18px;
+		}
+
+		@media (max-width: toEm(480)) {
 			font-size: 16px;
-      line-height: 1.1;
-    }
-  }
+			line-height: 1.1;
+		}
+	}
 }
 
 @keyframes popupDrop {
-  0% {
-    transform: translate(-50%, -140%);
-    opacity: 0;
-  }
+	0% {
+		transform: translate(-50%, -140%);
+		opacity: 0;
+	}
 
-  10% {
-    transform: translate(-50%, 0);
-    opacity: 1;
-  }
+	10% {
+		transform: translate(-50%, 0);
+		opacity: 1;
+	}
 
-  47.5% {
-    transform: translate(-50%, 0);
-    opacity: 1;
-  }
+	47.5% {
+		transform: translate(-50%, 0);
+		opacity: 1;
+	}
 
-  60% {
-    transform: translate(-50%, -140%);
-    opacity: 0;
-  }
+	60% {
+		transform: translate(-50%, -140%);
+		opacity: 0;
+	}
 
-  100% {
-    transform: translate(-50%, -140%);
-    opacity: 0;
-  }
+	100% {
+		transform: translate(-50%, -140%);
+		opacity: 0;
+	}
 }
 .title-block {
 	text-align: center;
@@ -243,60 +227,53 @@ p{
 	font-family: var(--secondaryFont);
 
 	&__label {
- 
- @include adaptiveValue("font-size", 26, 14, 0, $maxWidthContainer, 1000);
+		@include adaptiveValue("font-size", 26, 14, 0, $maxWidthContainer, 1000);
 		line-height: 1.3;
 		color: var(--orangeColor);
-		@media (max-width: toEm(1000)){
-			     @include adaptiveValue("font-size", 25, 12, 0, 999, 375);
+		@media (max-width: toEm(1000)) {
+			@include adaptiveValue("font-size", 25, 12, 0, 999, 375);
 		}
 	}
 
 	&__title {
 		font-size: 60px;
- @include adaptiveValue("font-size", 60, 35, 0, $maxWidthContainer, 1000);
+		@include adaptiveValue("font-size", 60, 35, 0, $maxWidthContainer, 1000);
 		line-height: 1;
-		@media (max-width:toEm(1000)){
-			   @include adaptiveValue("font-size", 55, 26, 0, 999, 375);
-				 
+		@media (max-width: toEm(1000)) {
+			@include adaptiveValue("font-size", 55, 26, 0, 999, 375);
 		}
 	}
 
 	&__text {
 		p {
-	 @include adaptiveValue("font-size", 26, 19, 0, $maxWidthContainer, 1000);
+			@include adaptiveValue("font-size", 26, 19, 0, $maxWidthContainer, 1000);
 			margin-bottom: 25px;
-			@media (max-width:toEm(1000)){
-				  	margin-bottom: 15px;
-						   @include adaptiveValue("font-size", 25, 14, 0, 999, 375);
+			@media (max-width: toEm(1000)) {
+				margin-bottom: 15px;
+				@include adaptiveValue("font-size", 25, 14, 0, 999, 375);
 			}
 		}
 		h2 {
-	 @include adaptiveValue("font-size", 46, 25, 0, $maxWidthContainer, 1000);
+			@include adaptiveValue("font-size", 46, 25, 0, $maxWidthContainer, 1000);
 
 			line-height: 115%;
-	 
+
 			text-align: center;
 			color: var(--orangeColor);
-			@media (max-width: toEm(1000)){
-				     @include adaptiveValue("font-size", 45, 30, 0, 999, 375);
+			@media (max-width: toEm(1000)) {
+				@include adaptiveValue("font-size", 45, 30, 0, 999, 375);
 			}
 		}
 	}
-}
-
-.button {
 }
 .advantages-hero {
 	display: flex;
 	max-width: 860px;
 	@include adaptiveValue("gap", 35, 15);
-	// gap: 35px;
-	@media (max-width:toEm(1000)){
-		 flex-direction:column; 
-		 	row-gap: 20px;
-			// padding-inline: 30px;
-			@include adaptiveValue("font-size", 24, 18);
+	@media (max-width: toEm(1000)) {
+		flex-direction: column;
+		row-gap: 20px;
+		@include adaptiveValue("font-size", 24, 18);
 	}
 	&__item {
 		display: flex;
@@ -306,17 +283,10 @@ p{
 		font-style: italic;
 		font-weight: 900;
 		line-height: 1.56;
-		&:first-child{
-			    min-width: 0;
-    width: 350px; // подбери по макету: 240–280px
-    white-space: nowrap;
+		&:first-child {
+			min-width: 0;
+			width: 350px;
+			white-space: nowrap;
 		}
- 
-	}
-
-	&__image {
-	}
-
-	&__text {
 	}
 }
