@@ -61,12 +61,12 @@ function headerScroll() {
 }
 document.querySelector("[data-fls-header-scroll]") ? window.addEventListener("load", headerScroll) : null;
 
-const REGISTRATION_URL = "https://reg.cuatrobet.com/es/regtel/1";
+const REGISTRATION_URL = "https://cuatrobet.com/es/regtel/1";
 
 function forwardRegistrationQuery() {
   const landingParams = new URLSearchParams(window.location.search);
 
-  document.querySelectorAll('a[href^="https://reg.cuatrobet.com"]').forEach((link) => {
+  document.querySelectorAll('a[href^="https://cuatrobet.com"]').forEach((link) => {
     const registrationUrl = new URL(REGISTRATION_URL);
     landingParams.forEach((value, key) => registrationUrl.searchParams.append(key, value));
     link.href = registrationUrl.toString();
